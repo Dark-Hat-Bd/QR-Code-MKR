@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            width: 100vw;
+            height: auto;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: rgba(53, 53, 53, 0.568);
+        }
+
+        body header {
+            width: 100vw;
+            height: 50px;
+            display: flex;
+
+
+        }
+
+        header .head {
+            width: 95vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: rgb(13, 50, 71);
+            margin-inline: auto;
+            border-radius: 5px;
+
+        }
+
+        header a {
+            text-decoration: none;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 20px;
+            width: 40vw;
+            color: rgb(161, 137, 137);
+            font-weight: bold;
+        }
+
+        body .container {
+            background-color: rebeccapurple;
+            display: flex;
+            flex-direction: column;
+            width: 90vw;
+            align-items: center;
+            padding-block: 40px;
+            border-radius: 10px;
+        }
+
+        .container h1 {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .container h5 {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-bottom: 10px;
+            color: rgb(27, 27, 27);
+        }
+
+        .container .textbox {
+            width: 70vw;
+            height: 30px;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        .container .makeqr {
+            width: 40vw;
+            height: 30px;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            font-size: 15px;
+            font-size: 15px;
+            font-weight: bolder;
+            color: rgb(238, 236, 236);
+            background-color: rgb(24, 129, 80);
+        }
+
+        .container a {
+            width: 40vw;
+            background-color: aqua;
+            text-align: center;
+            font-size: 16px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bolder;
+            text-decoration: none;
+            border-radius: 3px;
+            border: none;
+            margin-top: 5px;
+            padding: 5px;
+
+        }
+        body .container2 {
+            background-color: rgb(118, 62, 173);
+            display: flex;
+            margin-top: 5px;
+            flex-direction: column;
+            width: 90vw;
+            align-items: center;
+            padding-top: 40px;
+            border-radius: 10px;
+        }
+        .container2 img{
+            border-radius: 10px;
+        }
+        .container2 h1{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: rgb(22, 21, 21);
+            font-size: 25px;
+            margin: 5px;
+        }
+        .container2 h3{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: rgb(22, 21, 21);
+            font-size: 18px;
+            margin: 0px;
+        }
+        .container2 h2{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: rgb(22, 21, 21);
+            font-size: 16px;
+        }
+        .container2 h4{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: rgb(32, 32, 32);
+            font-size: 16px;
+            width: 90vw;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+            margin-top: 50px;
+            border-radius: 0px 0px 5px 5px;
+        }
+        .container2 a{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: rgb(228, 228, 228);
+            font-size: 16px;
+            font-weight: bolder;
+            background-color: rgb(19, 120, 202);
+            padding: 7px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            
+        }
+    </style>
+    <title>QR Code Maker</title>
+</head>
+
+<body>
+    <header>
+        <div class="head qr">
+            <a href="">QR Code Maker</a>
+        </div>
+    </header>
+    <form method="post">
+        <div class="container">
+            <H1>Hide any Text You want</H1>
+            <h5>1. Enter your Text 2. Click Make QR 3. Download</h5>
+            <input type="text" class="textbox" name="data" id="" placeholder="Enter Here : ">
+            <input class="makeqr" type="submit" value="Make QR">
+            <a class="" href="{{url_for('download_file')}}">Download</a>
+        </div>
+        <div class="container2">
+            <H1>Developer Info</H1>
+            <img src= {{ url_for('static', filename = 'developer.jpg') }} style="width:200px" >
+            <h1>Protan Halder</h2>
+            <h2>16 years old</h3>
+            <h3>protanhalder2021@gmail.com</h3>
+            <a href="https://www.facebook.com/i.am.protan">Facebook</a>
+            <h4>Copyright &copy; PROTAN HALDER 2022</h4>
+        </div>
+    </form>
+</body>
+
+</html>
